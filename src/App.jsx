@@ -70,9 +70,9 @@ function App() {
     <>
       <Wrapper>
         <UploadInput onChange={loadPdf} />
+        <Images images={images} removeImage={removeImage} />
+        {!!images.length && <Button onClick={convertToPdf} />}
       </Wrapper>
-      <Images images={images} removeImage={removeImage} />
-      {!!images.length && <Button onClick={convertToPdf} />}
     </>
   )
 }
